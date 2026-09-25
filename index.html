@@ -11,7 +11,10 @@
   html, body { margin:0; padding:0; }
   body {
     font-family: 'Tajawal', sans-serif;
-    background: #0d0f14;
+    background:
+      radial-gradient(1000px 600px at 15% 0%, rgba(78,161,212,.10), transparent 55%),
+      radial-gradient(900px 500px at 100% 25%, rgba(212,162,78,.08), transparent 55%),
+      linear-gradient(180deg, #0a1630 0%, #0e1c3d 45%, #0a1630 100%);
     color: #ecebe7;
     direction: rtl;
     line-height: 1.75;
@@ -45,7 +48,7 @@
     border: 1px solid rgba(236,235,231,.22);
   }
   .card {
-    background: #14171e; border: 1px solid #262a35; border-radius: 18px;
+    background: #101c38; border: 1px solid #1f3260; border-radius: 18px;
     padding: 26px; height: 100%;
   }
   .icon-badge {
@@ -55,18 +58,24 @@
   }
   .icon-badge.pain { background: rgba(226,80,80,.1); border: 1px solid rgba(226,80,80,.28); color:#e2a3a3; }
   .icon-badge.gain { background: rgba(212,162,78,.12); border: 1px solid rgba(212,162,78,.3); color:#d4a24e; }
+  /* لمسة ألوان متنوعة وجذابة على بطاقات الميزات (تدور كل 5 بطاقات) */
+  .grid3 .card:nth-child(1) .icon-badge.gain, .grid3 .card:nth-child(6) .icon-badge.gain { background: rgba(212,162,78,.14); border-color: rgba(212,162,78,.34); color:#e6ba63; }
+  .grid3 .card:nth-child(2) .icon-badge.gain, .grid3 .card:nth-child(7) .icon-badge.gain { background: rgba(90,170,224,.14); border-color: rgba(90,170,224,.34); color:#7ec3ef; }
+  .grid3 .card:nth-child(3) .icon-badge.gain, .grid3 .card:nth-child(8) .icon-badge.gain { background: rgba(88,206,150,.14); border-color: rgba(88,206,150,.34); color:#7fdcae; }
+  .grid3 .card:nth-child(4) .icon-badge.gain, .grid3 .card:nth-child(9) .icon-badge.gain { background: rgba(172,134,240,.14); border-color: rgba(172,134,240,.34); color:#c2a3f5; }
+  .grid3 .card:nth-child(5) .icon-badge.gain { background: rgba(230,130,150,.14); border-color: rgba(230,130,150,.34); color:#f0a9bb; }
   .card h3 { font-size: 17.5px; font-weight: 800; color: #fbf9f5; margin: 0 0 10px; }
   .card p { font-size: 14.5px; color: #a9a59c; margin: 0; }
   .badge-row { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
   .pill {
     display:flex; align-items:center; gap:8px;
-    background: #14171e; border: 1px solid #262a35; border-radius: 999px;
+    background: #101c38; border: 1px solid #1f3260; border-radius: 999px;
     padding: 10px 20px; font-size: 13.5px; color: #cfcbc1; font-weight:600;
   }
   .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
   .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
   .grid2 { display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center; }
-  footer { border-top:1px solid #1d2129; padding: 40px 32px; text-align:center; color:#6f6c64; font-size:13px; }
+  footer { border-top:1px solid #1f3260; padding: 40px 32px; text-align:center; color:#6f6c64; font-size:13px; }
   @media (max-width: 900px) {
     h1 { font-size: 33px; }
     .grid3 { grid-template-columns:1fr; }
@@ -79,7 +88,7 @@
 <body>
 
 <!-- ===== NAV ===== -->
-<div style="width:100%; border-bottom:1px solid #1d2129; position:sticky; top:0; z-index:50; background:rgba(13,15,20,.86); backdrop-filter:blur(10px);">
+<div style="width:100%; border-bottom:1px solid #1f3260; position:sticky; top:0; z-index:50; background:rgba(8,16,36,.86); backdrop-filter:blur(10px);">
   <div style="max-width:1180px; margin:0 auto; padding:14px 32px; display:flex; align-items:center; justify-content:space-between;">
     <div style="display:flex; align-items:center; gap:12px;">
       <img src="logo.jpg" alt="DONIA LABS TECH" style="width:42px; height:42px; border-radius:50%;">
@@ -247,19 +256,19 @@
   <div class="inner">
     <div class="badge-row">
       <div class="pill">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4a24e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e6ba63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
         مطابق للقرار الوزاري 833 بشأن الغياب
       </div>
       <div class="pill">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4a24e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7ec3ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
         مطابق للمنشور الوزاري 177/93
       </div>
       <div class="pill">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4a24e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7fdcae" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
         مُختبر فعلياً على 961 تلميذاً و88 موظفاً
       </div>
       <div class="pill">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4a24e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c2a3f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
         واجهة عربية كاملة من اليمين لليسار
       </div>
     </div>
@@ -268,7 +277,7 @@
 
 <!-- ===== FINAL CTA (urgency) ===== -->
 <section class="section">
-  <div class="inner" style="background:linear-gradient(135deg,#1a1508,#14171e); border:1px solid #2b2416; border-radius:26px; padding:60px 40px; text-align:center;">
+  <div class="inner" style="background:linear-gradient(135deg,#1a1508,#0e1c3d 55%,#101c38); border:1px solid rgba(212,162,78,.3); border-radius:26px; padding:60px 40px; text-align:center;">
     <span class="eyebrow">مرحلة الإطلاق المبكر</span>
     <h2 style="margin-top:18px; margin-bottom:16px;">كن من أوائل المؤسسات المرخَّصة رسمياً</h2>
     <p class="lede center" style="margin-bottom:36px;">كل يوم تُدار فيه مؤسستك بالطريقة القديمة هو وقت وثقة لن يعودا. حمّل النظام الآن، أو أرسل طلب ترخيص وسنتواصل معك خلال وقت قصير لإتمام التفعيل.</p>
